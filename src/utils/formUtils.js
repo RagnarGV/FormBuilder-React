@@ -2,11 +2,10 @@ import axios from "axios";
 
 export const setCsrfToken = async () => {
   try {
-    // Request the CSRF token from the Laravel backend
     const response = await axios.get(
       "http://127.0.0.1:8000/sanctum/csrf-cookie",
       {
-        withCredentials: true, // Ensure cookies are sent with the request
+        withCredentials: true,
       }
     );
 
@@ -35,7 +34,7 @@ export const saveForm = async (
       form_data: formData,
     };
 
-    const response = await axios.post("http://127.0.0.1:8000/save", formDatas);
+    await axios.post("http://127.0.0.1:8000/save", formDatas);
 
     fetchForms(setFormList);
     setFormElements([]);

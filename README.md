@@ -42,6 +42,10 @@ To set up the project locally, follow these steps:
 
 This command will install all the npm libraries required to run the project.
 
+## 📥 Run
+
+### `npm start`
+
 ## Environment
 
 This project is tested on local environment. API endpoints are also tested on local environment.

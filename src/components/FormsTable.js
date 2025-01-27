@@ -4,24 +4,6 @@ function FormsTable({ formList, setFormList, onEditForm }) {
   const deleteForm = async (formId) => {
     deleteFormbyId(formId, setFormList);
   };
-  // const deleteForm = async (formId) => {
-  //   try {
-  //     const confirmation = window.confirm(
-  //       "Are you sure you want to delete this form?"
-  //     );
-  //     if (!confirmation) return;
-
-  //     // API call to delete the form
-  //     await axios.delete(`http://127.0.0.1:8000/delete/${formId}`);
-
-  //     // Update the form list after deletion
-  //     setFormList((prevList) => prevList.filter((form) => form.id !== formId));
-  //     alert("Form deleted successfully!");
-  //   } catch (error) {
-  //     console.error("Error deleting form:", error);
-  //     alert("Failed to delete the form. Please try again.");
-  //   }
-  // };
 
   const editForm = (formId) => {
     onEditForm(formId); // Trigger the onEditForm callback
