@@ -1,0 +1,295 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f9fc;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.draggable-item:hover {
+  background-color: #2980b9;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #2c3e50;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Layout Styles */
+.form-builder {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+body {
+  --table-width: 100%;
+}
+tbody {
+  display: block;
+  max-height: 500px;
+  overflow-y: auto;
+}
+thead,
+tbody tr {
+  display: table;
+  width: var(--table-width);
+  table-layout: fixed;
+}
+.sidebar,
+.form-canvas,
+.properties-panel {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  width: 20%;
+  min-width: 200px;
+}
+
+.sidebar > div {
+  box-shadow: 5px 5px 0px black; /* Solid shadow for 3D effect */
+}
+
+.box {
+  border-radius: 0%;
+  box-shadow: 5px 5px 0px black; /* Solid shadow for 3D effect */
+}
+
+.sidebar-items {
+}
+
+.form-canvas {
+  flex-grow: 1;
+  min-height: 600px;
+  border: 2px dashed #bdc3c7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.properties-panel {
+  width: 50%;
+}
+
+/* Draggable Items */
+.form-canvas > div {
+  width: 100%;
+  border: #333 1px solid;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.form-canvas > div:hover {
+  background-color: #dfe6e9;
+}
+
+/* Preview Modal */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.ReactModal__Content {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.ReactModal__Content h3 {
+  margin-bottom: 20px;
+}
+
+.ReactModal__Content button {
+  margin-top: 20px;
+  background-color: #e74c3c;
+}
+
+.ReactModal__Content button:hover {
+  background-color: #c0392b;
+}
+/* Table container styling */
+.mt-5 {
+  margin-top: 3rem;
+}
+
+h3 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  box-shadow: 5px 5px 0px black;
+}
+
+.table th {
+  background-color: #07a3ca;
+  color: #fff;
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.table td {
+  padding: 12px;
+  font-size: 14px;
+  color: #555;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #e8f5e9;
+  transition: all 0.2s ease;
+}
+
+/* Button styling */
+.btn {
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #a71d2a;
+}
+
+/* Centering "No forms available" */
+.text-center {
+  text-align: center;
+  font-weight: 500;
+  color: #888;
+  font-size: 14px;
+}
+
+.container {
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  padding: 20px;
+  box-shadow: 5px 5px 0px black; /* Solid shadow for 3D effect */
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid black;
+  border-right: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.input-group button {
+  padding: 8px 20px;
+  background-color: gray;
+  color: white;
+  border: 1px solid black;
+  border-left: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.input-group button:hover {
+  background-color: darkgray;
+}
