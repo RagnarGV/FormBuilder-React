@@ -31,7 +31,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Installation
 
-### `npm install` or `npm install`
+### `npm install`
 
 This command will install all the npm libraries required to run the project.
 
