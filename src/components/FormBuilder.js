@@ -4,7 +4,6 @@ import FormCanvas from "./FormCanvas";
 import PropertiesPanel from "./PropertiesPanel";
 import PreviewModal from "./PreviewModal";
 import { DragDropContext } from "react-beautiful-dnd";
-import axios from "axios";
 import FormsTable from "./FormsTable";
 import { fetchForms, getFormById } from "../utils/formUtils";
 function FormBuilder() {
@@ -21,6 +20,13 @@ function FormBuilder() {
 
   const fetchFormById = async (formId) => {
     getFormById(formId, setEditingFormId, setFormElements, setEditingFormTitle);
+  };
+
+  const onClearCanvas = async () => {
+    setEditingFormId(null);
+    setEditingFormTitle("");
+    setSelectedElement(null);
+    setFormElements([]);
   };
 
   const onDragEnd = (result) => {
@@ -67,11 +73,17 @@ function FormBuilder() {
         {formElements.length > 0 && (
           <button
             onClick={() => setIsPreviewOpen(true)}
-            className="box text-black fw-bolder bg-info mt-4"
+            className="box text-black fw-bolder bg-info mt-4 me-2"
           >
             Preview Form
           </button>
         )}
+        <button
+          onClick={() => onClearCanvas()}
+          className="box text-black fw-bolder bg-info mt-4"
+        >
+          Clear Canvas
+        </button>
         <PreviewModal
           isOpen={isPreviewOpen}
           formElements={formElements}
